@@ -9,6 +9,8 @@ var userSchema = mongoose.Schema({
     local            : {
         email        : String,
         password     : String,
+        firstName    : String,
+        lastName     : String
     },
     facebook         : {
         id           : String,
@@ -29,7 +31,14 @@ var userSchema = mongoose.Schema({
         name         : String
     }
 
+
+
 });
+
+// Create virtual "clientName" ======================
+userSchema.virtual('clientName').get(function() {
+    return `${this.firstName} ${this.lastName}`.trim();
+  });
 
 // methods ======================
 // generating a hash
