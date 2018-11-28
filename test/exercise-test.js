@@ -8,9 +8,9 @@ mongoose.promise = global.Promise;
 
 const should = chai.should();
 
-const { Exercise } = require("../models/exercise");
+const { TEST_DATABASE_URL } = require('../config/database');
+const { Exercise } = require("../app/models/exercise");
 const {app, runServer, closeServer} = require('../server');
-const { TEST_DATABASE_URL } = require('../config');
 
 chai.use(chaiHttp);
 
