@@ -9,7 +9,7 @@ mongoose.promise = global.Promise;
 const should = chai.should();
 
 const { TEST_DATABASE_URL } = require('../config/database');
-const { User } = require("../app/models/user");
+const  User  = require("../app/models/user");
 const {app, runServer, closeServer} = require('../server');
 
 chai.use(chaiHttp);

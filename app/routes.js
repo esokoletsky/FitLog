@@ -1,4 +1,4 @@
-const { User } = require('./models/user');
+const   User  = require('./models/user');
 const { Exercise } = require("./models/exercise");
 
 // app/routes.js
@@ -108,7 +108,7 @@ module.exports = function(app, passport) {
       });
     
       app.post('/users', (req, res) => {
-        const requiredFields = [ 'firstName','lastName', 'userName' ];
+        const requiredFields = [ 'firstName','lastName', 'email' ];
         for (let i = 0; i < requiredFields.length; i++) {
           const field = requiredFields[i];
           if (!(field in req.body)) {
@@ -159,7 +159,7 @@ module.exports = function(app, passport) {
         }
     
         const updated = {};
-        const updatableFields = ['firstName', 'lastName', 'userName'];
+        const updatableFields = ['firstName', 'lastName', 'email'];
         updatableFields.forEach(field => {
           if (field in req.body) {
             updated[field] = req.body[field];

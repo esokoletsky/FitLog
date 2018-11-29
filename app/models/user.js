@@ -35,6 +35,14 @@ var userSchema = mongoose.Schema({
 
 });
 
+userSchema.methods.serialize = function() {
+    return {
+        id: this._id,
+        clientName: this.clientName,
+        email: this.email
+    };
+};
+
 // Create virtual "clientName" ======================
 userSchema.virtual('clientName').get(function() {
     return `${this.firstName} ${this.lastName}`.trim();

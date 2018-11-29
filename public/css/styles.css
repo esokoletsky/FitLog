@@ -1,0 +1,46 @@
+.heading {
+    text-align: center;
+    font-size: 55px;
+    color: #EB2850;
+    height: 15%;
+    width: 100%;
+    
+}
+
+.navigation {
+    
+    font-size: 18px;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navigation li {
+    float: left;
+}
+
+.navigation li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.navigation li a:hover {
+    background-color: #91CEF5;
+}
+
+.gateway {
+    
+    width: 100%;
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size:100%;
+    text-align: center;
+    background-image: url("/images/fit-background.jpg");
+}
