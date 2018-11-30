@@ -1,5 +1,25 @@
+body {
+
+    background-image: url(https://static1.squarespace.com/static/5592ce58e4b040c8aa41e2db/t/55e8a360e4b0e5099351d169/1441309988703/Lowkey+Weights+Guy+GIrl.jpg?format=1500w);
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+}
+
+.loginbg {
+        background-image: url(/images/loginbg.jpg);
+        background-size: cover;
+        background-position: center center;
+        min-height: 100vh;
+}
+
 .fixed {
-    position: absolute;
+    position: fixed;
+    background: white;
+    width: 100%;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
 }
 .heading {
     text-align: left;
@@ -8,13 +28,15 @@
     color: #EB2850;
     height: 7%;
     width: 100%;
+    margin-left: 5px;
 }
 
 
 .navigation {
     
-    font-size: 18px;
-    position: fixed;
+font-size: 18px;
+    
+/* position: fixed; */
 }
 
 .navigation ul {
@@ -42,22 +64,70 @@
 }
 
 .container {
-    background-image: url("/images/fit-background.jpg");
-    background-repeat: no-repeat;
-    background-size:100%;
-    height: 900px;
     width: 100%;
     position: absolute;
-    margin-top: 12%;
+    margin-top: 5%;
 }
+
+.container h1 {
+    margin-left: 35px;
+    color: gray;
+}
+
+.container2 {
+    width: 100%;
+    position: absolute;
+    margin-top: 5%;
+}
+
 .gateway {
     margin: 0px auto;
-    width: 35%;
+    width: 20%;
     text-align: center;
-    background-color: #91CEF5
+    background-color: #3f5d82;
+    opacity: 0.7;
+    border-radius: 5px;
+}
+
+.gateway p {
+    color: white;
+    font-size: 35px;
+    font-family: 'PT Sans Narrow', sans-serif;
     
 }
 
-.gateway h1 {
-    margin: 0px 0px;
+.login {
+    margin: 0px auto;
+    width: 25%;
+    text-align: center;
+    background-color: #3f5d82;
+    opacity: 0.7;
+    border-radius: 5px;
+    color: white;
+}
+
+.button {
+    background-color: #EB2850;
+    border: none;
+    color: white;
+    padding: 8px 20px;
+    margin: 0px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.form-row { display: flex; }
+label { flex: 1; text-align: right; }
+input { flex: 2;}
+
+.resizedTextbox {
+    width: 80px; 
+    height: 20px;
+    margin-left: 5px;
+    margin-right: 20%;
 }
