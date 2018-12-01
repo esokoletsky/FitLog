@@ -2,36 +2,36 @@
 <!doctype html>
 <html>
 <head>
-    <title>Node Authentication</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-    <style>
-        body        { padding-top:80px; word-wrap:break-word; }
-    </style>
+        <% include ./partials/head %>
 </head>
-<body>
+<body class="profileBg">
+        <header>
+                <% include ./partials/header %>
+        </header>
+
 <div class="container">
 
-    <div class="page-header text-center">
-        <h1><span class="fa fa-anchor"></span> Profile Page</h1>
-        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
-    </div>
 
-    <div class="row">
-
-        <!-- LOCAL INFORMATION -->
-        <div class="col-sm-6">
-            <div class="well">
-                <h3><span class="fa fa-user"></span> Local</h3>
-
-                    <p>
-                        <strong>id</strong>: <%= user._id %><br>
-                        <strong>email</strong>: <%= user.local.email %><br>
-                        <strong>password</strong>: <%= user.local.password %>
-                    </p>
-
-            </div>
-        </div>
+    <section id="setup routine" role="main" class="routineContainer" >
+            <h3>Setup your workout routine</h3>
+            <form action="/exercises" method="post">
+                Day:<br>
+                <input type="text" placeholder="Ex: Day 1"></input><br>
+                Muscle Group:<br>
+                <input type="text" placeholder="Ex: Arms"></input><br>
+                Muscle:<br>
+                <input type="text" placeholder="Ex: Bicep"></input><br>
+                Exercise Name:<br>
+                <input type="text" placeholder="Ex: Curls"></input><br>
+                Exercise Weight:<br>
+                <input type="text" placeholder="Ex: 45 lbs"></input><br>
+                How many sets:<br>
+                <input type="text" placeholder="Ex: 3"></input><br>
+                How many reps:<br>
+                <input type="text" placeholder="Ex: 10"></input><br>
+                <button type="submit" class="button">Submit</button>
+            </form>
+            </section>
 
     </div>
 

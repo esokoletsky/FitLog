@@ -1,3 +1,6 @@
+input {
+    border-radius: 7px;
+}
 body {
 
     background-image: url(https://static1.squarespace.com/static/5592ce58e4b040c8aa41e2db/t/55e8a360e4b0e5099351d169/1441309988703/Lowkey+Weights+Guy+GIrl.jpg?format=1500w);
@@ -11,6 +14,13 @@ body {
         background-size: cover;
         background-position: center center;
         min-height: 100vh;
+}
+
+.profileBg {
+    background-image: url(/images/profileBg.jpg);
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
 }
 
 .fixed {
@@ -130,4 +140,22 @@ input { flex: 2;}
     height: 20px;
     margin-left: 5px;
     margin-right: 20%;
+}
+
+.routineContainer {
+    margin: 2% auto;
+    width: 25%;
+    color: white;
+    text-align: center;
+    background-color: #3f5d82;
+    opacity: 0.9;
+    border-radius: 5px;
+    padding: 11px 0px;
+}
+
+.routineContainer input {
+    width: 50%;
+    height: 23px;
+    background-color: #F9F4B4;
+
 }
