@@ -20,6 +20,7 @@ const exerciseSchema = mongoose.Schema(
 exerciseSchema.methods.serialize = function() {
     return {
       id: this._id,
+      user: this.user,
       day: this.day,
       muscleGroup: this.muscleGroup,
       muscle: this.muscle,

@@ -106,6 +106,22 @@ module.exports = function(app, passport) {
             res.status(500).json({ error: 'something went terribly wrong' });
           });
       });
+
+      app.get('/user-exercises', isLoggedIn, (req, res) => {
+        Exercise
+          .find({user: req.user._id})
+          .then(exercises => {
+            res.render('user-exercises.ejs',{
+              user: req.user,
+              exercises: exercises
+            });
+            //res.json({exercises: exercises.map(exercise => exercise.serialize())});
+          })
+          .catch(err => {
+            console.error(err);
+            res.status(500).json({ error: 'something went terribly wrong' });
+          });
+      });
     
       app.post('/users', (req, res) => {
         const requiredFields = [ 'firstName','lastName', 'email' ];
@@ -128,8 +144,8 @@ module.exports = function(app, passport) {
       
       });
     
-      app.post('/exercises', (req, res) => {
-        const requiredFields = [ 'day', 'muscleGroup', 'muscle', 'name', 'weight', 'sets', 'reps' ];
+      app.post('/exercises', isLoggedIn, (req, res) => {
+        const requiredFields = ['day', 'muscleGroup', 'muscle', 'name', 'weight', 'sets', 'reps' ];
         for (let i = 0; i < requiredFields.length; i++) {
           const field = requiredFields[i];
           if (!(field in req.body)) {
@@ -138,11 +154,13 @@ module.exports = function(app, passport) {
             return res.status(400).send(message);
           }
         }
+        req.body.user = req.user._id;
       
            Exercise
           .create(req.body)
           .then(exercise => {
-             res.status(201).json(exercise.serialize())
+            res.redirect('/user-exercises');
+             //res.status(201).json(exercise.serialize())
           })
           .catch(err => {
             console.error(err);

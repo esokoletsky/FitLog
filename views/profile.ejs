@@ -12,31 +12,31 @@
 <div class="container">
 
 
-    <section id="setup routine" role="main" class="routineContainer" >
+    <section id="setupRoutine" role="main" class="routineContainer" >
             <h3>Setup your workout routine</h3>
             <form action="/exercises" method="post" id="js-start">
                 <p>Day:</p>
-                <p><input type="text" name="day" placeholder="Ex: Day 1"></input></p>
+                <p><input type="text" name="day" value=" Day 1"></input></p>
                 <p>Muscle Group:</p>
-                <p><input type="text" name="muscleGroup" placeholder="Ex: Arms"></input></p>
+                <p><input type="text" name="muscleGroup" value=" Arms"></input></p>
                 <p>Muscle:</p>
-                <p><input type="text" name="muscle" placeholder="Ex: Bicep"></input></p>
+                <p><input type="text" name="muscle" value=" Bicep"></input></p>
                 <p>Exercise Name:</p>
-                <p><input type="text" name="name" placeholder="Ex: Curls"></input></p>
+                <p><input type="text" name="name" value=" Curls"></input></p>
                 <p>Exercise Weight:</p>
-                <p><input type="text" name="weight" placeholder="Ex: 45"></input></p>
+                <p><input type="text" name="weight" value=" 45"></input></p>
                 <p>How many sets:</p>
-                <p><input type="text" name="sets" placeholder="Ex: 3"></input></p>
+                <p><input type="text" name="sets" value=" 3"></input></p>
                 <p>How many reps:</p>
-                <p><input type="text" name="reps" placeholder="Ex: 10"></input></p>
-                <button type="submit" class="button">Submit</button>
+                <p><input type="text" name="reps" value=" 10"></input></p>
+                <button type="submit" class="button">Add routine</button>
+                <button type="submit" class="button" onclick="window.location.href='/user-exercises'">Go to current routine</button>
             </form>
             </section>
 
     </div>
 
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script type="text/javascript" src="app.js"></script>
+
 </body>
 </html>
