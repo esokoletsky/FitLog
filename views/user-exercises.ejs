@@ -8,17 +8,18 @@
 </head>
 <body>
     <h1>Just a test to show the users exercises</h1>
+    
     <ul>
-        
+            
         <% exercises.forEach((exercise)=>{ %>
-            <li> <%=exercise.day%> </li>
-            <li>Muscle Group: <%=exercise.muscleGroup%> </li>
+            <li> <%=exercise.day%>  <a href="/delete-exercise/<%=exercise._id%>"> delete </a> | <a href="/edit-exercise/<%=exercise._id%>"> edit </a> </li>
+            <li>Muscle Group: <%=exercise.muscleGroup%>  </li>
             <li>Specific Muscle: <%=exercise.muscle%> </li>
             <li>Exercise Name: <%=exercise.name%> </li>
             <li>Weight: <%=exercise.weight%> </li>
             <li>Sets: <%=exercise.sets%> </li>
             <li>Reps: <%=exercise.reps%> </li>
-            <p>User Info: <%=exercise.user.local.firstName%> <%=exercise.user.local.lastName%></p>
+            
         <% }) %>
 
     </ul>

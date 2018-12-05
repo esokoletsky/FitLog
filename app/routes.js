@@ -70,6 +70,7 @@ module.exports = function(app, passport) {
     // Exercise & User endpoints ===========
     // =====================================
    
+
     app.get('/users', (req, res) => {
         User
           .find()
@@ -122,8 +123,39 @@ module.exports = function(app, passport) {
             res.status(500).json({ error: 'something went terribly wrong' });
           });
       });
+
+      app.get('/delete-exercise/:id', isLoggedIn, (req, res) => {
+        Exercise
+          .findOneAndRemove({_id: req.params.id, user: req.user._id })
+          .then(() => {
+            //res.status(204).json({ message: 'success' });
+            res.redirect('/user-exercises');
+          })
+          .catch(err => {
+            console.error(err);
+            res.status(500).json({ error: 'something went terribly wrong' });
+          });
+      });
+
+      app.get('/edit-exercise/:id', isLoggedIn, (req, res) => {
+        Exercise
+          .findOne({_id: req.params.id, user: req.user._id })
+          .then((exercise) => {
+            if(exercise){
+              res.render('edit-exercise.ejs',{user: req.user,exercise: exercise});
+            } else {
+              res.status(404).json({ message: 'not found' });
+            }
+          })
+          .catch(err => {
+            console.error(err);
+            res.status(500).json({ error: 'something went terribly wrong' });
+          });
+      });
+
+      
     
-      app.post('/users', (req, res) => {
+      app.post('/users', isLoggedIn, (req, res) => {
         const requiredFields = [ 'firstName','lastName', 'email' ];
         for (let i = 0; i < requiredFields.length; i++) {
           const field = requiredFields[i];
@@ -158,6 +190,30 @@ module.exports = function(app, passport) {
       
            Exercise
           .create(req.body)
+          .then(exercise => {
+            res.redirect('/user-exercises');
+             //res.status(201).json(exercise.serialize())
+          })
+          .catch(err => {
+            console.error(err);
+            res.status(500).json({ error: 'Something went wrong' });
+          });
+      
+      });
+
+      app.post('/update-exercise/:id', isLoggedIn, (req, res) => {
+        const requiredFields = ['day', 'muscleGroup', 'muscle', 'name', 'weight', 'sets', 'reps' ];
+        for (let i = 0; i < requiredFields.length; i++) {
+          const field = requiredFields[i];
+          if (!(field in req.body)) {
+            const message = `Missing \`${field}\` in request body`;
+            console.error(message);
+            return res.status(400).send(message);
+          }
+        }
+      
+           Exercise
+          .findOneAndUpdate({_id:req.params.id,user:req.user._id},{$set:req.body})
           .then(exercise => {
             res.redirect('/user-exercises');
              //res.status(201).json(exercise.serialize())

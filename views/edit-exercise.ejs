@@ -1,0 +1,42 @@
+<!-- views/profile.ejs -->
+<!doctype html>
+<html>
+<head>
+        <% include ./partials/head %>
+</head>
+<body class="profileBg">
+        <header>
+                <% include ./partials/header %>
+        </header>
+
+<div class="container">
+
+
+    <section id="setupRoutine" role="main" class="routineContainer" >
+            <h3>Edit your workout routine</h3>
+            <form action="/update-exercise/<%=exercise._id%>" method="post" id="js-start">
+                <p>Day:</p>
+                <p><input type="text" name="day" value="<%=exercise.day%>"></input></p>
+                <p>Muscle Group:</p>
+                <p><input type="text" name="muscleGroup" value="<%=exercise.muscleGroup%>"></input></p>
+                <p>Muscle:</p>
+                <p><input type="text" name="muscle" value="<%=exercise.muscle%>"></input></p>
+                <p>Exercise Name:</p>
+                <p><input type="text" name="name" value="<%=exercise.name%>"></input></p>
+                <p>Exercise Weight:</p>
+                <p><input type="text" name="weight" value="<%=exercise.weight%>"></input></p>
+                <p>How many sets:</p>
+                <p><input type="text" name="sets" value="<%=exercise.sets%>"></input></p>
+                <p>How many reps:</p>
+                <p><input type="text" name="reps" value="<%=exercise.reps%>"></input></p>
+                <button type="submit" class="button">Update routine</button>
+                <a class="button" href="/user-exercises">Go to current routine</a>
+            </form>
+            </section>
+
+    </div>
+
+</div>
+
+</body>
+</html>
