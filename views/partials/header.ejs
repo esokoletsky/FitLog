@@ -1,14 +1,17 @@
 <div class="fixed">
         <div class="heading">
-            FitLog
+           <a href="/">FitLog</a>
         </div>
         <div class="navigation">
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="/signup">Signup</a></li>
-                    <li><a href="/user-exercises">My Routine</a></li>
-                    <li><a href="/profile">Add Routine</a></li>
+                    <% if(user){ %>
+                        <li><a href="/user-exercises">My Routine</a></li>
+                        <li><a href="/profile">Add Routine</a></li>
+                    <% } else { %>
+                        <li><a href="/login">Login</a></li>
+                        <li><a href="/signup">Signup</a></li>
+                    <% } %>
+                    
                 </ul>
             </div>
         </div>

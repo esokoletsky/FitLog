@@ -30,6 +30,7 @@ body {
     z-index: 1;
     top: 0px;
     left: 0px;
+    padding: 10px;
 }
 .heading {
     text-align: left;
@@ -37,14 +38,24 @@ body {
     font-weight: bold;
     color: #EB2850;
     height: 7%;
-    width: 100%;
+    width: 50%;
     margin-left: 5px;
+    float: left;
 }
+
+.heading a {
+    color: #EB2850;
+    text-decoration: none;
+  }
+
 
 
 .navigation {
     
-font-size: 18px;
+    font-size: 18px;
+    width: 48%;
+    float: left;
+    text-align: right;
     
 /* position: fixed; */
 }
@@ -54,10 +65,11 @@ font-size: 18px;
     margin: 0px 0px;
     padding: 0;
     overflow: hidden;
+    margin-right: 0px;
 }
 
 .navigation li {
-    float: left;
+    display: inline-block;
 }
 
 .navigation li a {
@@ -81,7 +93,7 @@ font-size: 18px;
 
 .container h1 {
     margin-left: 35px;
-    color: gray;
+    color: white;
 }
 
 .container2 {
@@ -92,14 +104,15 @@ font-size: 18px;
 
 .gateway {
     margin: 0px auto;
-    width: 25%;
+    width: 35%;
     text-align: center;
     background-color: #3f5d82;
     opacity: 0.7;
     border-radius: 5px;
     color: white;
-    font-size: 20px;
+    font-size: 30px;
     padding: 5px 5px; 
+    min-width: 300px;
 }
 
 .gateway p {
@@ -110,14 +123,25 @@ font-size: 18px;
 }
 
 .login {
-    margin: 0px auto;
+    margin: 15vh auto;
     width: 25%;
     text-align: center;
     background-color: #3f5d82;
     opacity: 0.7;
     border-radius: 5px;
     color: white;
+    min-width: 350px;
+    padding: 10px 0px;
 }
+
+.login p a:link {
+    text-decoration: none;
+    color: orangered;
+}
+
+.login p a:visited {
+    color: orange;
+  }
 
 .button {
     background-color: #EB2850;
@@ -146,14 +170,15 @@ input { flex: 2;}
 }
 
 .routineContainer {
-    margin: 2% auto;
-    width: 25%;
+    margin: 20px auto;
+    width: 30%;
     color: white;
     text-align: center;
     background-color: #3f5d82;
     opacity: 0.9;
     border-radius: 5px;
     padding: 11px 0px;
+    min-width: 350px;
 }
 
 .routineContainer input {
@@ -165,7 +190,7 @@ input { flex: 2;}
 
 .container3 {
     margin: auto;
-    margin-top: 10%;
+    margin-top: 75px;
     background-color: white;
     width: 30%;
     border-radius: 5px;
@@ -180,6 +205,7 @@ ul {
     width: 85%;
     padding: 5px 0px;
     margin:auto;
+    
 
   }
 
@@ -207,7 +233,7 @@ ul {
 }
   @media screen and (max-width: 673px) {
     .container3 {
-        width: 50%;
+        width: 70%;
     }
 }
 
