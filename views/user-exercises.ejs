@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,23 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <% include ./partials/head %>
+
 </head>
 <body>
-    <h1>Just a test to show the users exercises</h1>
+             <header>
+                    <% include ./partials/header %>
+            </header>   
     
-    <ul>
-            
-        <% exercises.forEach((exercise)=>{ %>
-            <li> <%=exercise.day%>  <a href="/delete-exercise/<%=exercise._id%>"> delete </a> | <a href="/edit-exercise/<%=exercise._id%>"> edit </a> </li>
-            <li>Muscle Group: <%=exercise.muscleGroup%>  </li>
-            <li>Specific Muscle: <%=exercise.muscle%> </li>
-            <li>Exercise Name: <%=exercise.name%> </li>
-            <li>Weight: <%=exercise.weight%> </li>
-            <li>Sets: <%=exercise.sets%> </li>
-            <li>Reps: <%=exercise.reps%> </li>
-            
-        <% }) %>
+    <div class="container3">
+        <div class="myRoutine">
+        <h1>My Routine</h1>
+        </div> 
+        <ul>
+                
+            <% exercises.forEach((exercise)=>{ %>
+               <div class="eachDay">
+                <li> <%=exercise.day%>  <a href="/delete-exercise/<%=exercise._id%>"> delete </a> | <a href="/edit-exercise/<%=exercise._id%>"> edit </a> </li>
+                <li>Muscle Group: <%=exercise.muscleGroup%>  </li>
+                <li>Specific Muscle: <%=exercise.muscle%> </li>
+                <li>Exercise Name: <%=exercise.name%> </li>
+                <li>Weight: <%=exercise.weight%> </li>
+                <li>Sets: <%=exercise.sets%> </li>
+                <li>Reps: <%=exercise.reps%> </li>
+               </div>
+            <% }) %>
 
-    </ul>
+        </ul>    
+   </div> 
 </body>
 </html>

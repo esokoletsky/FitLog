@@ -92,11 +92,14 @@ font-size: 18px;
 
 .gateway {
     margin: 0px auto;
-    width: 20%;
+    width: 25%;
     text-align: center;
     background-color: #3f5d82;
     opacity: 0.7;
     border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    padding: 5px 5px; 
 }
 
 .gateway p {
@@ -158,4 +161,58 @@ input { flex: 2;}
     height: 23px;
     background-color: #F9F4B4;
 
+}
+
+.container3 {
+    margin: auto;
+    margin-top: 10%;
+    background-color: white;
+    width: 30%;
+    border-radius: 5px;
+    opacity: 0.9;
+    text-align: center;
+
+}
+
+
+ul {
+    list-style-type: none;
+    width: 85%;
+    padding: 5px 0px;
+    margin:auto;
+
+  }
+
+
+  .eachDay {
+    margin: 20px 20px;  
+    border: solid  #EB2850 1px;
+    border-radius: 3px;
+    padding: 5px 5px;
+
+
+    
+  }
+
+  .myRoutine {
+    color: #67bbf7;
+  }
+
+  /* MEDIA QUERIES */
+
+  @media screen and (min-width: 674px) {
+    .container3 {
+        width: 40%;
+    }
+}
+  @media screen and (max-width: 673px) {
+    .container3 {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .container3 {
+        width: 70%;
+    }
 }
