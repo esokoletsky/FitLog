@@ -12,3 +12,8 @@ ________________________________________________________________________________
 ## Screenshot
 
 ![alt text](https://github.com/esokoletsky/FitLog/blob/master/public/images/homepage.PNG)
+![alt text](https://github.com/esokoletsky/FitLog/blob/master/public/images/login.PNG)
+![alt text](https://github.com/esokoletsky/FitLog/blob/master/public/images/signup.PNG)
+![alt text](https://github.com/esokoletsky/FitLog/blob/master/public/images/setuproutine.PNG)
+![alt text](https://github.com/esokoletsky/FitLog/blob/master/public/images/routine.PNG)
+
