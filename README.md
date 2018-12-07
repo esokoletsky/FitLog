@@ -17,3 +17,13 @@ ________________________________________________________________________________
 ![alt text](https://github.com/esokoletsky/FitLog/blob/master/public/images/setuproutine.PNG)
 ![alt text](https://github.com/esokoletsky/FitLog/blob/master/public/images/routine.PNG)
 
+__________________________________________________________________________________________________________________________________________
+Built with:
+
+Frontend: HTML/JS/CSS
+
+Backend: Node/Express
+
+Database: MongoDB
+
+Auth layer: JWT/Passport
