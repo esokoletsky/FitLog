@@ -11,4 +11,4 @@ ________________________________________________________________________________
 
 ## Screenshot
 
-![alt text](https://github.com/esokoletsky/Favorable/blob/master/Favorable.jpg)
+![alt text](https://github.com/esokoletsky/FitLog/blob/master/public/images/homepage.PNG)
