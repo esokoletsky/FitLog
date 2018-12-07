@@ -26,4 +26,4 @@ Backend: Node/Express
 
 Database: MongoDB
 
-Auth layer: JWT/Passport
+Auth layer: Passport
