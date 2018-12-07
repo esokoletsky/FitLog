@@ -1,1 +1,13 @@
-#FitLog
+# FitLog
+
+FitLog is a web app that allows you to create a workout routine.
+After the routine is created, feel free to edit/delete routine 
+once your workout needs change. This app is designed to keep you
+on track with your fitness goals. Stay healthy! 
+
+Live link to [FitLog](https://murmuring-headland-74895.herokuapp.com/)
+
+__________________________________________________________________________________________________________________________________________
+
+## Screenshot
+
