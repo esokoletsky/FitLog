@@ -11,3 +11,4 @@ ________________________________________________________________________________
 
 ## Screenshot
 
+![alt text](https://github.com/esokoletsky/Favorable/blob/master/Favorable.jpg)
