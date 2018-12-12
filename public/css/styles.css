@@ -128,6 +128,14 @@ body {
     min-width: 300px;
 }
 
+.gateway a:link {
+    text-decoration: none;
+    color: white;
+}
+
+.gateway a:visited {
+    color: white;
+}
 .gateway p {
     color: white;
     font-size: 35px;
